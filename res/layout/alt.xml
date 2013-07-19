@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center" android:background="#6666ff">
+    <RelativeLayout
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent" 
+    android:id="@+id/linearLayout1">
+    <Button 
+    	android:layout_alignParentRight="true" 
+    	android:layout_alignParentTop="true" 
+    	android:id="@+id/button1" 
+    	android:layout_gravity="right" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:text="Send My Location!"></Button>
+    <AutoCompleteTextView 
+    	android:layout_width="fill_parent" 
+        	android:layout_toLeftOf="@id/button1" 
+    	android:layout_alignParentLeft="true" 
+    	android:text="" 
+    	android:hint="Send to...                     " 
+    	android:layout_height="wrap_content" android:id="@+id/auto_com">
+    
+    </AutoCompleteTextView>
+    </RelativeLayout>
+    
+    
+    <LinearLayout 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent" 
+    	android:id="@+id/linearLayout2" 
+    	android:orientation="vertical" android:background="@drawable/bg">
+    	<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingLeft="5dip">
+    <ImageView android:id="@+id/imageView1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/sendloc_ic3c" android:layout_gravity="center" android:paddingLeft="0dip"></ImageView>
+    <TextView android:text="I'm Here!" android:textColor="#000" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_gravity="center|clip_horizontal" android:textStyle="bold"></TextView>
+    </LinearLayout>
+    
+    <RelativeLayout 
+    	android:id="@+id/relativeLayout1" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+    
+    <LinearLayout 
+    	android:id="@+id/infoll"
+    	android:layout_height="wrap_content" 
+    	android:layout_width="wrap_content" 
+    	android:orientation="vertical"
+    	android:paddingRight="60dip">
+    <TextView 
+    	    	android:text="Latitude:" 
+    	    	android:textColor="#000"
+    	    	android:layout_height="wrap_content" 
+    	    	android:layout_width="wrap_content" 
+				android:paddingTop="10dip"
+				android:paddingLeft="10dip"></TextView>
+    	    <TextView 
+    	    	android:text="Acquiring..." 
+    	    	android:textColor="#000" 
+    	    	android:id="@+id/lat" 
+    	    	android:layout_height="wrap_content" 
+    	    	android:layout_width="wrap_content" 
+    	    	android:textStyle="bold"
+    	    	android:paddingLeft="15dip"></TextView>
+    	    	<TextView 
+    	    	android:text="Longitude:" 
+    	    	android:textColor="#000"
+    	    	android:layout_height="wrap_content" 
+    	    	android:layout_width="wrap_content" 
+				android:paddingTop="10dip"
+				android:paddingLeft="10dip"></TextView>
+    	    <TextView 
+    	    	android:text="Acquiring..." 
+    	    	android:textColor="#000" 
+    	    	android:id="@+id/lon" 
+    	    	android:layout_height="wrap_content" 
+    	    	android:layout_width="wrap_content" 
+    	    	android:textStyle="bold"
+    	    	android:paddingLeft="15dip"></TextView>
+    	    <TextView 
+    	    	android:text="Accurate to:" 
+    	    	android:textColor="#000"
+    	    	android:layout_height="wrap_content" 
+    	    	android:layout_width="wrap_content" 
+				android:paddingTop="10dip"
+				android:paddingLeft="10dip"></TextView>
+    	    <TextView 
+    	    	android:text="Acquiring..." 
+    	    	android:textColor="#000" 
+    	    	android:id="@+id/accur" 
+    	    	android:layout_height="wrap_content" 
+    	    	android:layout_width="wrap_content" 
+    	    	android:textStyle="bold"
+    	    	android:paddingLeft="15dip"
+    	    	android:paddingBottom="10dip"></TextView>
+    	    	</LinearLayout>
+    	    <com.google.android.maps.MapView
+		android:id="@+id/mapview"
+		android:apiKey="0_n3AIA9Y9MwMfIzkcDfejPU5cV8WDptybMHw7Q"
+		android:layout_width="150dip"
+    	android:layout_height="150dip"
+    	android:enabled="true"
+    	android:clickable="true" android:layout_alignParentRight="true" android:layout_marginRight="10dip"/>
+    	
+    	<Button 
+    		android:text="Share Location" 
+    		android:id="@+id/share" 
+    		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content"
+    		android:layout_below="@id/infoll" android:layout_marginTop="20dip" android:layout_marginLeft="10dip"></Button>
+    	</RelativeLayout>
+    
+    </LinearLayout>
+    
+    
+	
+</LinearLayout>
